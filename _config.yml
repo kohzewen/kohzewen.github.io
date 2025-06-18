@@ -24,7 +24,7 @@ author:
   # Biographic information
   avatar           : "headshot.jpg"
   name             : "Ze-Wen Koh"
-  pronouns         : "she/her"
+  pronouns         : # "she/her"
   bio              : "planetary geomorphology, hydrology, and climate"
   location         : 
   employer         : "MIT EAPS"
