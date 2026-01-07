@@ -41,3 +41,34 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+/* --- Custom Typography & Color Overrides --- */
+
+/* Import Inter (The best Helvetica alternative for web) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  color: #222222 !important; /* A very dark grey, softer than pure black */
+  font-weight: 300 !important; 
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500 !important;
+  color: #111111 !important;
+  letter-spacing: -0.02em; /* Gives it that tight, modern look */
+}
+
+/* --- Remove the "Ugly" Footer elements --- */
+.page__footer-follow, 
+.page__footer-copyright {
+  display: none !important;
+}
+
+/* Optional: Keep a very minimal copyright if you want */
+footer {
+  border-top: 1px solid #eee;
+  padding-top: 20px !important;
+}
