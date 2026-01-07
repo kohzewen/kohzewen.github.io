@@ -10,7 +10,7 @@ author_profile: true
   .page__title {
     font-size: 2.2rem !important; /* Larger than the 1.5rem paper titles */
     font-weight: 900 !important;  /* Heavier weight */
-    margin-bottom: 30px !important;
+    margin-bottom: 20px !important;
   }
 </style>
 
@@ -35,12 +35,12 @@ author_profile: true
       {{ post.excerpt }}
     </div>    
 
-    <div style="margin-bottom: 25px; display: flex; gap: 20px;">
+    <div style="margin-bottom: 25px; display: flex; gap: 35px;">
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem;">Read more</a>
+        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 500">Read more</a>
       {% endif %}
       {% if post.pdf %}
-        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem;">PDF</a>
+        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 500">PDF</a>
       {% endif %}
     </div>
 
