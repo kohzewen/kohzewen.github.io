@@ -61,14 +61,15 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em; /* Gives it that tight, modern look */
 }
 
-/* --- Remove the "Ugly" Footer elements --- */
+/* --- Completely Remove Footer & Grey Bar --- */
+.page__footer, 
+.site-footer, 
 .page__footer-follow, 
 .page__footer-copyright {
   display: none !important;
-}
-
-/* Optional: Keep a very minimal copyright if you want */
-footer {
-  border-top: 1px solid #eee;
-  padding-top: 20px !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background-color: transparent !important;
 }
