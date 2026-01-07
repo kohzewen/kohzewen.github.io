@@ -5,20 +5,29 @@ permalink: /publications/
 author_profile: true
 ---
 
+<style>
+  /* Target the main page title specifically */
+  .page__title {
+    font-size: 2.2rem !important; /* Larger than the 1.5rem paper titles */
+    font-weight: 900 !important;  /* Heavier weight */
+    margin-bottom: 30px !important;
+  }
+</style>
+
 {% include base_path %}
 
 {% assign posts = site.publications | sort: 'date' | reverse %}
 
 {% for post in posts %}
-  <div style="margin-bottom: 70px; padding-bottom: 40px;">
+  <div style="margin-bottom: 50px; padding-bottom: 20px;">
     
-    <h2 style="margin-bottom: 8px; font-size: 1.5rem; border-bottom: none;">{{ post.title }}</h2>
+    <h2 style="margin-bottom: 2px; font-size: 1.5rem; border-bottom: none;">{{ post.title }}</h2>
     
     {% if post.venue %}
-          <p style="margin-bottom: 2px; color: #666; font-size: 1rem;"><em>{{ post.venue }}</em></p>
-        {% endif %}
+      <p style="margin-bottom: 0px; color: #666; font-size: 1rem;"><em>{{ post.venue }}</em></p>
+    {% endif %}
 
-    <p style="margin-bottom: 15px; color: #666; font-size: 1rem;">
+    <p style="margin-top: 0px; margin-bottom: 15px; color: #666; font-size: 1rem;">
       {{ post.authors }}
     </p>
     
@@ -26,12 +35,12 @@ author_profile: true
       {{ post.excerpt }}
     </div>    
 
-    <div style="margin-bottom: 25px; display: flex; gap: 8px;">
+    <div style="margin-bottom: 25px; display: flex; gap: 20px;">
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 26px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;">Read more here</a>
+        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem;">Read more</a>
       {% endif %}
       {% if post.pdf %}
-        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 26px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;">PDF</a>
+        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem;">PDF</a>
       {% endif %}
     </div>
 
@@ -39,6 +48,3 @@ author_profile: true
 
   </div>
 {% endfor %}
-
-
-
