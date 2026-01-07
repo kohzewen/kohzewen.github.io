@@ -10,28 +10,28 @@ author_profile: true
 {% assign posts = site.publications | sort: 'date' | reverse %}
 
 {% for post in posts %}
-  <div style="margin-bottom: 70px; border-bottom: 1px solid #f2f2f2; padding-bottom: 40px;">
+  <div style="margin-bottom: 70px; padding-bottom: 40px;">
     
     <h2 style="margin-bottom: 8px; font-size: 1.5rem; border-bottom: none;">{{ post.title }}</h2>
     
     {% if post.venue %}
-          <p style="margin-bottom: 5px; font-size: 1rem;"><em>{{ post.venue }}</em></p>
+          <p style="margin-bottom: 2px; color: #666; font-size: 1rem;"><em>{{ post.venue }}</em></p>
         {% endif %}
 
     <p style="margin-bottom: 15px; color: #666; font-size: 1rem;">
-      <em>{{ post.authors }}</em>
+      {{ post.authors }}
     </p>
     
-    <div style="margin-bottom: 25px; line-height: 1.6; font-size: 0.95rem;">
+    <div style="margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem;">
       {{ post.excerpt }}
     </div>    
 
     <div style="margin-bottom: 25px; display: flex; gap: 8px;">
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;">Link</a>
+        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 26px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;">Read more here</a>
       {% endif %}
       {% if post.pdf %}
-        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;">PDF</a>
+        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 26px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600;">PDF</a>
       {% endif %}
     </div>
 
