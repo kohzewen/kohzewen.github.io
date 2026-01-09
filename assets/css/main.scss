@@ -101,6 +101,7 @@ h3, h4 {
 /* --- Safety Reset --- */
 /* Ensures buttons specifically do NOT get underlines if they are inside those areas */
 .custom-btn {
+  color: #ffffff !important;
   text-decoration: none !important;
 }
 
