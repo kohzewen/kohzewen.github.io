@@ -103,3 +103,18 @@ h3, h4 {
 .custom-btn {
   text-decoration: none !important;
 }
+
+/* Reset the text color so it stays white on hover */
+.custom-btn:hover {
+  color: #ffffff !important; 
+  text-decoration: none !important;
+  
+  /* Darken the background slightly */
+  /* This uses a filter so it works regardless of what shade of blue you use */
+  filter: brightness(0.9); 
+}
+
+/* Ensure the transition is smooth */
+.custom-btn {
+  transition: all 0.2s ease !important;
+}
