@@ -58,17 +58,17 @@ h1, h2 {
   font-family: "Inter", sans-serif !important;
   font-weight: 800 !important;
   color: #111111 !important;
-  letter-spacing: -0.02em; /* Gives it that tight, modern look */
+  letter-spacing: -0.02em;
 }
 
 h3, h4 {
   font-family: "Inter", sans-serif !important;
   font-weight: 600 !important;
   color: #111111 !important;
-  letter-spacing: -0.02em; /* Gives it that tight, modern look */
+  letter-spacing: -0.02em;
 }
 
-/* --- Completely Remove Footer & Grey Bar --- */
+/* --- Remove Footer & Grey Bar --- */
 .page__footer, 
 .site-footer, 
 .page__footer-follow, 
@@ -79,4 +79,27 @@ h3, h4 {
   padding: 0 !important;
   border: none !important;
   background-color: transparent !important;
+}
+
+/* Targets links only inside the main content areas */
+.page__content a, 
+.archive a, 
+.inner-content a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 1px; /* Gives the underline a little breathing room */
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.page__content a:hover, 
+.archive a:hover, 
+.inner-content a:hover {
+  color: #7fa7e7 !important; 
+  text-decoration: none;
+}
+
+/* --- Safety Reset --- */
+/* Ensures buttons specifically do NOT get underlines if they are inside those areas */
+.custom-btn {
+  text-decoration: none !important;
 }
