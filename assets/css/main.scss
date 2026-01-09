@@ -85,9 +85,9 @@ h3, h4 {
 .page__content a, 
 .archive a, 
 .inner-content a {
-  color: inherit;
+  color: #7fa7e7 !important; /*inherit;*/
   text-decoration: underline;
-  text-underline-offset: 1px; /* Gives the underline a little breathing room */
+  text-underline-offset: 2px; /* Gives the underline a little breathing room */
   transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 

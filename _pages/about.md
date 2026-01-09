@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I'm a Ph.D student in the [Department of Earth, Atmospheric, and Planetary Sciences](https://eaps.mit.edu/) at the Massachusetts Institute of Technology (MIT). I work with Professor Gaia Stucky de Quay in the [Gaia Lab](https://thegaialab.com/), where I study the formation and evolution of planetary surfaces.
+Hello! My name is Ze-Wen, and I'm a Ph.D student in Planetary Science at MIT. I work with Prof. Gaia Stucky de Quay in the [Gaia Lab](https://thegaialab.com/), where I study the formation and evolution of planetary surfaces.
 
 Currently, my work focuses on the interactions between climatic forcing and landscape evolution on Earth, Mars, and Titan. By leveraging remote sensing data analysis, numerical modelling, fieldwork, and theory, I aim to bridge the gap between climate predictions and planetary surface observations.
 
