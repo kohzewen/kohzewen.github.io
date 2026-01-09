@@ -35,16 +35,39 @@ author_profile: true
       {{ post.excerpt }}
     </div>    
 
-    <div style="margin-bottom: 25px; display: flex; gap: 35px;">
+    <div style="margin-bottom: 25px; display: flex; gap: 25px;">
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 500">Read more</a>
+        <a href="{{ post.paperurl }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600">Read more</a>
       {% endif %}
       {% if post.pdf %}
-        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 500">PDF</a>
+        <a href="{{ post.pdf }}" class="custom-btn" style="background: #7acadc; color: #333; padding: 6px 16px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: 600">PDF</a>
       {% endif %}
     </div>
 
-    {{ post.content }}
+    <div class="image-gallery">
+      {{ post.content }}
+    </div>
 
   </div>
 {% endfor %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+<script>
+  $(document).ready(function() {
+    $('.image-popup').magnificPopup({
+      type: 'image',
+      closeOnContentClick: true,
+      mainClass: 'mfp-with-zoom', 
+      image: {
+        verticalFit: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300
+      }
+    });
+  });
+</script>
