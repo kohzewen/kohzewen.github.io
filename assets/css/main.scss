@@ -99,23 +99,21 @@ h3, h4 {
 }
 
 /* --- Safety Reset --- */
-/* Ensures buttons specifically do NOT get underlines if they are inside those areas */
-.custom-btn {
+/* Use a more specific selector to override the general link color */
+a.custom-btn, 
+.page__content a.custom-btn, 
+.archive a.custom-btn {
   color: #ffffff !important;
   text-decoration: none !important;
+  display: inline-block; /* Helps with padding/layout */
+  transition: all 0.2s ease !important;
 }
 
-/* Reset the text color so it stays white on hover */
-.custom-btn:hover {
+/* Hover state */
+a.custom-btn:hover,
+.page__content a.custom-btn:hover,
+.archive a.custom-btn:hover {
   color: #ffffff !important; 
   text-decoration: none !important;
-  
-  /* Darken the background slightly */
-  /* This uses a filter so it works regardless of what shade of blue you use */
   filter: brightness(0.9); 
-}
-
-/* Ensure the transition is smooth */
-.custom-btn {
-  transition: all 0.2s ease !important;
 }
