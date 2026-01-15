@@ -8,9 +8,9 @@ author_profile: true
 <style>
   /* Target the main page title specifically */
   .page__title {
-    font-size: 2.2rem !important; /* Larger than the 1.5rem paper titles */
-    font-weight: 900 !important;  /* Heavier weight */
-    margin-bottom: 20px !important;
+    font-size: 1.5rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 15px !important;
   }
 </style>
 
@@ -19,9 +19,9 @@ author_profile: true
 {% assign posts = site.publications | sort: 'date' | reverse %}
 
 {% for post in posts %}
-  <div style="margin-bottom: 50px; padding-bottom: 20px;">
+  <div style="margin-bottom: 30px; padding-bottom: 15px;">
     
-    <h2 style="margin-bottom: 2px; font-style: italic; font-size: 1.5rem; border-bottom: none;">{{ post.title }}</h2>
+    <h2 style="margin-bottom: 2px; font-style: italic; font-size: 1.2rem; border-bottom: none;">{{ post.title }}</h2>
     
     {% if post.venue %}
       <p style="margin-bottom: 0px; color: #666; font-size: 1rem;"><em>{{ post.venue }}</em></p>
