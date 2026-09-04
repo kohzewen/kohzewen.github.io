@@ -1,9 +1,10 @@
 (() => {
   const root = document.documentElement;
   const saved = localStorage.getItem('theme');
-  root.dataset.theme = saved
-    ? saved
-    : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+  // Default is ALWAYS light. OS preference is ignored.
+  // Dark mode only applies if the visitor clicked the toggle themselves.
+  root.dataset.theme = (saved === 'dark') ? 'dark' : 'light';
 
   const btn = document.getElementById('themetog');
   if (btn) btn.addEventListener('click', () => {

@@ -4,7 +4,7 @@
   --clay:#c97b5a; --clay-soft:rgba(201,123,90,.13);
   --serif:"Fraunces",Georgia,serif;
   --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --wrap:1060px; --r:22px;
+  --wrap:820px; --r:22px;
   --shadow:0 2px 4px rgba(43,51,48,.04),0 14px 34px rgba(43,51,48,.07);
 }
 [data-theme="dark"]{
@@ -53,7 +53,7 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 /* ---------- LAYOUT ---------- */
 main{max-width:var(--wrap);margin:auto;padding:0 1.5rem 5rem}
 section{margin-top:4.5rem}
-.prose{max-width:66ch}
+/* .prose{max-width:66ch} */
 .prose p{margin:0 0 1.2rem;color:var(--ink-soft)}
 .prose strong{color:var(--ink);font-weight:600}
 
@@ -151,39 +151,26 @@ h3{font-family:var(--sans);font-size:1.02rem;font-weight:600;
   *{transition:none!important;scroll-behavior:auto!important}
 }
 
-/* ---------- TILES ---------- */
 /* =========================================================
    TILES — image left, blurb right
    ========================================================= */
-.tiles{list-style:none;margin:0;padding:0;display:grid;gap:2.6rem}
+:root{ --tile:200px; --tile-sm:136px; }   /* research / outreach sizes */
 
-.tile{display:grid;grid-template-columns:136px 1fr;gap:1.9rem;align-items:start}
+.tiles{list-style:none;margin:0;padding:0;display:grid;gap:3rem}
 
-.tile__media{margin:0;width:136px;flex:none}
-.tile__media img{
-  width:136px;height:136px;object-fit:cover;
-  border-radius:26px;                 /* rounded square */
-  box-shadow:var(--shadow);
-  background:var(--accent-soft);      /* placeholder tint while loading */
-}
-/* circular variant — for planets, portraits */
-.tile--circle .tile__media img{border-radius:50%}
+.tile{display:grid;gap:2.1rem;align-items:start}
 
-/* logo variant — contain, don't crop; white plate so logos read in dark mode */
-.tile--logo .tile__media img{
-  object-fit:contain;background:#fff;padding:1rem;
-  border:1px solid var(--line);border-radius:22px;box-shadow:none;
-}
+.tile__media{margin:0;flex:none}
+.tile__media img{object-fit:cover;box-shadow:var(--shadow);background:var(--accent-soft)}
 
-/* tiny credit line under an image */
 .tile__credit{
-  display:block;margin-top:.5rem;font-size:.68rem;line-height:1.35;
+  display:block;margin-top:.55rem;font-size:.68rem;line-height:1.35;
   color:var(--ink-soft);opacity:.75;text-align:center;
 }
 .tile__credit a{color:inherit;border-bottom:1px solid var(--line)}
 
-.tile__body{min-width:0}   /* prevents long words breaking the grid */
-.tile__body h3{margin:0 0 .55rem;font-size:1.12rem}
+.tile__body{min-width:0}
+.tile__body h3{margin:0 0 .55rem;font-size:1.14rem}
 .tile__body p{margin:0 0 .9rem;color:var(--ink-soft);font-size:.96rem}
 .tile__body p:last-child{margin-bottom:0}
 .tile__tag{
@@ -195,19 +182,36 @@ h3{font-family:var(--sans);font-size:1.02rem;font-weight:600;
 .tile:nth-child(even) .tile__tag{color:var(--clay);background:var(--clay-soft)}
 .tile__meta{font-size:.82rem;color:var(--ink-soft);margin:.5rem 0 0;opacity:.85}
 
-/* alternating sides — delete this rule if you want all images on the left */
-@media (min-width:721px){
-  .tiles--zigzag .tile:nth-child(even){grid-template-columns:1fr 136px}
-  .tiles--zigzag .tile:nth-child(even) .tile__media{order:2}
+/* ---------- RESEARCH : large rounded squares ---------- */
+.tile--photo{grid-template-columns:var(--tile) 1fr}
+.tile--photo .tile__media{width:var(--tile)}
+.tile--photo .tile__media img{
+  width:var(--tile);height:var(--tile);
+  border-radius:30px;                 /* rounded square */
 }
 
-/* mobile: shrink rather than stack, keeps it compact */
+/* ---------- OUTREACH : circular logos ---------- */
+.tile--logo{grid-template-columns:var(--tile-sm) 1fr}
+.tile--logo .tile__media{width:var(--tile-sm)}
+.tile--logo .tile__media img{
+  width:var(--tile-sm);height:var(--tile-sm);
+  border-radius:50%;                  /* circle */
+  object-fit:contain;                 /* never crop a logo */
+  background:#fff;padding:1.15rem;    /* white plate + breathing room */
+  border:1px solid var(--line);
+  box-shadow:none;
+}
+
+/* ---------- mobile ---------- */
 @media (max-width:720px){
-  .tiles{gap:2rem}
-  .tile{grid-template-columns:92px 1fr;gap:1.1rem}
-  .tile__media{width:92px}
-  .tile__media img{width:92px;height:92px;border-radius:20px}
-  .tile--logo .tile__media img{padding:.6rem;border-radius:16px}
+  .tiles{gap:2.2rem}
+  .tile{gap:1.2rem}
+  .tile--photo{grid-template-columns:120px 1fr}
+  .tile--photo .tile__media{width:120px}
+  .tile--photo .tile__media img{width:120px;height:120px;border-radius:22px}
+  .tile--logo{grid-template-columns:88px 1fr}
+  .tile--logo .tile__media{width:88px}
+  .tile--logo .tile__media img{width:88px;height:88px;padding:.65rem}
   .tile__body h3{font-size:1.03rem}
   .tile__credit{display:none}
 }
