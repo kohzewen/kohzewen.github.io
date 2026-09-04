@@ -197,7 +197,7 @@ h3{font-family:var(--sans);font-size:1.02rem;font-weight:600;
   width:var(--tile-sm);height:var(--tile-sm);
   border-radius:50%;                  /* circle */
   object-fit:contain;                 /* never crop a logo */
-  background:#fff;padding:0.4rem;    /* white plate + breathing room */
+  background:#fff;padding:0.1rem;    /* white plate + breathing room */
   border:1px solid var(--line);
   box-shadow:none;
 }
