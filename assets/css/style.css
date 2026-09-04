@@ -4,7 +4,7 @@
   --clay:#c97b5a; --clay-soft:rgba(201,123,90,.13);
   --serif:"Fraunces",Georgia,serif;
   --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --wrap:820px; --r:22px;
+  --wrap:890px; --r:22px;
   --shadow:0 2px 4px rgba(43,51,48,.04),0 14px 34px rgba(43,51,48,.07);
 }
 [data-theme="dark"]{
@@ -197,7 +197,7 @@ h3{font-family:var(--sans);font-size:1.02rem;font-weight:600;
   width:var(--tile-sm);height:var(--tile-sm);
   border-radius:50%;                  /* circle */
   object-fit:contain;                 /* never crop a logo */
-  background:#fff;padding:1.15rem;    /* white plate + breathing room */
+  background:#fff;padding:0.4rem;    /* white plate + breathing room */
   border:1px solid var(--line);
   box-shadow:none;
 }
